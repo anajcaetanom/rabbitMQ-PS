@@ -22,7 +22,7 @@ def publish_log():
     routing_key = 'log'
     publisher = Publisher('localhost')
     publisher.publish(
-        exchange='direct_logs',
+        exchange='direct_error_log',
         message=message,
         routing_key=routing_key
     )
@@ -33,7 +33,7 @@ def publish_error():
     routing_key = 'error'
     publisher = Publisher('localhost')
     publisher.publish(
-        exchange='direct_error',
+        exchange='direct_error_log',
         message=message,
         routing_key=routing_key
     )

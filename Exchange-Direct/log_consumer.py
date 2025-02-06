@@ -6,5 +6,5 @@ class LOGConsumer(BaseConsumer):
 
 if __name__ == "__main__":
     consumer = LOGConsumer("localhost","log")
-    consumer.consume("direct_logs")
+    consumer.consume("direct_error_log")
     consumer.close_connection()

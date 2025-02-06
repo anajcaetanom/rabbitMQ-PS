@@ -6,5 +6,5 @@ class ERRORConsumer(BaseConsumer):
 
 if __name__ == "__main__":
     consumer = ERRORConsumer("localhost", "error")
-    consumer.consume("direct_error")
+    consumer.consume("direct_error_log")
     consumer.close_connection()
