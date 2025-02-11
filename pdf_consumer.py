@@ -5,6 +5,7 @@ class PDFConsumer(BaseConsumer):
         return "PDF"
 
 if __name__ == "__main__":
-    consumer = PDFConsumer("localhost")
-    consumer.consume("text_exchange")
+    consumer = PDFConsumer("localhost", queue_name="pdf_queue")
+    consumer.subscribe()
+    consumer.consume()
     consumer.close_connection()

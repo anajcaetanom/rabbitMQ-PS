@@ -5,6 +5,7 @@ class VIMConsumer(BaseConsumer):
         return "VIM"
 
 if __name__ == "__main__":
-    consumer = VIMConsumer("localhost")
-    consumer.consume("text_exchange")
+    consumer = VIMConsumer("localhost", queue_name="vim_queue")
+    consumer.subscribe()
+    consumer.consume()
     consumer.close_connection()
